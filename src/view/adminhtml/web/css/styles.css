@@ -1,0 +1,61 @@
+/*------------------------------------
+ #magento2-config-hints v1.0.0
+------------------------------------*/
+
+a[data-config-hint],
+.accordion .config .note a[data-config-hint] {
+    position: relative;
+    font-family: monospace, monospace;
+    background-color: #e9e9e9;
+    padding: 0 5px;
+    border: 1px solid #adadad;
+    color: #303030;
+    border-radius: 1px;
+}
+
+a[data-config-hint]::after,
+a[data-config-hint]::before {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility .2s, opacity .2s;
+    -o-transition: visibility .2s, opacity .2s;
+    transition: visibility .2s, opacity .2s;
+}
+
+a[data-config-hint]::after {
+    content: attr(data-tooltip-text);
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 9px;
+    border-radius: 3px;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 1;
+    top: calc(100% + 6px);
+    left: 50%;
+    font-size: 10px;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a[data-config-hint]::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 6px 6px;
+    border-color: #000000 transparent;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+a[data-config-hint]:hover::after,
+a[data-config-hint]:hover::before {
+    visibility: visible;
+    opacity: 1;
+}

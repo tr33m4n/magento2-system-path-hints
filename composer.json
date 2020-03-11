@@ -1,0 +1,25 @@
+{
+    "name": "tr33m4n/magento2-config-hints",
+    "type": "magento2-module",
+    "description": "Display the associated path beneath a configuration field in the Magento 2 admin panel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Doyle",
+            "email": "tr33m4n@googlemail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "files": [
+            "src/registration.php"
+        ],
+        "psr-4": {
+            "tr33m4n\\ConfigHints\\": "src"
+        }
+    },
+    "require": {
+        "php": "^7.2",
+        "magento/framework": "^100.1||^101.0||^102.0"
+    }
+}

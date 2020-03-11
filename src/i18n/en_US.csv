@@ -1,0 +1,4 @@
+"Enable Admin Config Hints","Enable Admin Config Hints"
+"Enable to display admin config path for each admin setting","Enable to display admin config path for each admin setting"
+"%1<strong>Config path:</strong> <a href=""#"" data-tooltip-text=""Click to copy"" data-config-hint>%2</a>","%1<strong>Config path:</strong> <a href=""#"" data-tooltip-text=""Click to copy"" data-config-hint>%2</a>"
+"Copied!","Copied!"
