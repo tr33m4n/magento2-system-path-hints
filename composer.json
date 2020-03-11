@@ -1,7 +1,7 @@
 {
-    "name": "tr33m4n/magento2-config-hints",
+    "name": "tr33m4n/magento2-system-path-hints",
     "type": "magento2-module",
-    "description": "Display the associated path beneath a configuration field in the Magento 2 admin panel",
+    "description": "A convenient way to view and copy a system configuration path from the admin panel",
     "license": "MIT",
     "authors": [
         {
@@ -15,7 +15,7 @@
             "src/registration.php"
         ],
         "psr-4": {
-            "tr33m4n\\ConfigHints\\": "src"
+            "tr33m4n\\SystemPathHints\\": "src"
         }
     },
     "require": {

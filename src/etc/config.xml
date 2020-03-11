@@ -4,7 +4,7 @@
     <default>
         <dev>
             <debug>
-                <config_hints>0</config_hints>
+                <system_path_hints>0</system_path_hints>
             </debug>
         </dev>
     </default>

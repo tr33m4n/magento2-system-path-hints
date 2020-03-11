@@ -1,9 +1,9 @@
 /*------------------------------------
- #magento2-config-hints v1.0.0
+ #magento2-system-path-hints v1.0.0
 ------------------------------------*/
 
-a[data-config-hint],
-.accordion .config .note a[data-config-hint] {
+a[data-path-hint],
+.accordion .config .note a[data-path-hint] {
     position: relative;
     font-family: monospace, monospace;
     background-color: #e9e9e9;
@@ -13,8 +13,8 @@ a[data-config-hint],
     border-radius: 1px;
 }
 
-a[data-config-hint]::after,
-a[data-config-hint]::before {
+a[data-path-hint]::after,
+a[data-path-hint]::before {
     visibility: hidden;
     opacity: 0;
     -webkit-transition: visibility .2s, opacity .2s;
@@ -22,7 +22,7 @@ a[data-config-hint]::before {
     transition: visibility .2s, opacity .2s;
 }
 
-a[data-config-hint]::after {
+a[data-path-hint]::after {
     content: attr(data-tooltip-text);
     background-color: #000000;
     color: #ffffff;
@@ -40,7 +40,7 @@ a[data-config-hint]::after {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-a[data-config-hint]::before {
+a[data-path-hint]::before {
     content: '';
     position: absolute;
     border-style: solid;
@@ -54,8 +54,8 @@ a[data-config-hint]::before {
     transform: translateX(-50%);
 }
 
-a[data-config-hint]:hover::after,
-a[data-config-hint]:hover::before {
+a[data-path-hint]:hover::after,
+a[data-path-hint]:hover::before {
     visibility: visible;
     opacity: 1;
 }

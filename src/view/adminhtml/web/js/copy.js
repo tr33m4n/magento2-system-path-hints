@@ -7,7 +7,7 @@ require([
     var timeout = null;
 
     document.addEventListener('click', function (event) {
-        if (!event.target.matches('[data-config-hint]')) {
+        if (!event.target.matches('[data-path-hint]')) {
             return;
         }
 
@@ -27,7 +27,7 @@ require([
                 return;
             }
 
-            event.target.setAttribute('data-tooltip-text', $t('Copied!'))
+            event.target.setAttribute('data-tooltip-text', $t('Copied!'));
             timeout = setTimeout(function () {
                 event.target.setAttribute('data-tooltip-text', originalText);
 

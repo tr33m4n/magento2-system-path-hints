@@ -4,9 +4,9 @@
     <system>
         <section id="dev">
             <group id="debug">
-                <field id="config_hints" translate="label,comment" type="select" sortOrder="100" showInDefault="1"
+                <field id="system_path_hints" translate="label,comment" type="select" sortOrder="100" showInDefault="1"
                        showInWebsite="0" showInStore="0">
-                    <label>Enable Admin Config Hints</label>
+                    <label>Enable System Path Hints</label>
                     <comment>Enable to display system configuration path's for each admin field</comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>

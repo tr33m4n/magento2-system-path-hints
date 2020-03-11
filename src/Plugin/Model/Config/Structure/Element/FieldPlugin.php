@@ -1,6 +1,6 @@
 <?php
 
-namespace tr33m4n\ConfigHints\Plugin\Model\Config\Structure\Element;
+namespace tr33m4n\SystemPathHints\Plugin\Model\Config\Structure\Element;
 
 use Magento\Config\Model\Config\Structure\Element\Field;
 use Magento\Framework\App\Config\ScopeConfigInterface;
@@ -8,14 +8,14 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
 /**
  * Class FieldPlugin
  *
- * @package tr33m4n\ConfigHints\Plugin\Model\Config\Structure\Element
+ * @package tr33m4n\SystemPathHints\Plugin\Model\Config\Structure\Element
  */
 class FieldPlugin
 {
     /**
-     * Config hints path
+     * System path hints path
      */
-    const XML_ENABLE_CONFIG_HINTS_PATH = 'dev/debug/config_hints';
+    const XML_ENABLE_PATH_HINTS_PATH = 'dev/debug/system_path_hints';
 
     /**
      * @var \Magento\Framework\App\Config\ScopeConfigInterface
@@ -34,7 +34,7 @@ class FieldPlugin
     }
 
     /**
-     * Add config path to the field comment
+     * Add path to the field comment
      *
      * @param \Magento\Config\Model\Config\Structure\Element\Field $subject
      * @param string                                               $result
@@ -42,12 +42,12 @@ class FieldPlugin
      */
     public function afterGetComment(Field $subject, string $result) : string
     {
-        if (!$this->scopeConfig->isSetFlag(self::XML_ENABLE_CONFIG_HINTS_PATH)) {
+        if (!$this->scopeConfig->isSetFlag(self::XML_ENABLE_PATH_HINTS_PATH)) {
             return $result;
         }
 
         return $result .= __(
-            '%1<strong>Path:</strong> <a href="#" data-tooltip-text="Click to copy" data-config-hint>%2</a>',
+            '%1<strong>Path:</strong> <a href="#" data-tooltip-text="Click to copy" data-path-hint>%2</a>',
             strlen($result) ? '<br>' : '',
             $subject->getConfigPath() ?: $subject->getPath()
         );
