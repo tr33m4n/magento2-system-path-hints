@@ -1,4 +1,4 @@
-"Enable Admin Config Hints","Enable Admin Config Hints"
-"Enable to display admin config path for each admin setting","Enable to display admin config path for each admin setting"
+"Enable System Path Hints","Enable System Path Hints"
+"Enable to display system configuration path's for each admin field","Enable to display system configuration path's for each admin field"
 "%1<strong>Path:</strong> <a href=""#"" data-tooltip-text=""Click to copy"" data-path-hint>%2</a>","%1<strong>Path:</strong> <a href=""#"" data-tooltip-text=""Click to copy"" data-path-hint>%2</a>"
 "Copied!","Copied!"
