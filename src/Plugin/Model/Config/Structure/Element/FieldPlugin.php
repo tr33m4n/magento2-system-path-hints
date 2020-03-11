@@ -47,7 +47,7 @@ class FieldPlugin
         }
 
         return $result .= __(
-            '%1<strong>Config path:</strong> <a href="#" data-tooltip-text="Click to copy" data-config-hint>%2</a>',
+            '%1<strong>Path:</strong> <a href="#" data-tooltip-text="Click to copy" data-config-hint>%2</a>',
             strlen($result) ? '<br>' : '',
             $subject->getConfigPath() ?: $subject->getPath()
         );
