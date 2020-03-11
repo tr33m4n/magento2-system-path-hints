@@ -9,7 +9,7 @@ to a field in the admin panel... Alas (unless I've missed something) this does n
 
 This module adds a "config hint" beneath all system configuration fields when enabled. Clicking on the hint will copy it to your clipboard! Handy dandy.
 
-![image](https://user-images.githubusercontent.com/1771667/76466588-e3449180-63df-11ea-8a81-dc26bdb787bb.png)
+![image](https://user-images.githubusercontent.com/1771667/76467147-df653f00-63e0-11ea-9144-df728a70cc0b.png)
 
 ## Installing
 This module is available on https://packagist.org/
