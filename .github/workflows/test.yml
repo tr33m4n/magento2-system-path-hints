@@ -28,9 +28,6 @@ jobs:
                     php-version: ${{ matrix.php }}
                     tools: composer:v2
             -   name: Install dependencies
-                run: |
-                    composer config --global --auth http-basic.repo.magento.com ${{ secrets.MAGENTO_REPO_USERNAME }} ${{ secrets.MAGENTO_REPO_PASSWORD }}
-                    sudo chmod 644 ~/.composer/auth.json
-                    composer update
+                run: composer update
             -   name: Run static analysis test suite
                 run: composer run test
