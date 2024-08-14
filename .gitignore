@@ -1,0 +1,10 @@
+/vendor
+/.php_cs.cache
+/var
+/composer.lock
+/app
+/.phpunit.cache
+/.editorconfig
+/.idea
+/Makefile
+/Brewfile

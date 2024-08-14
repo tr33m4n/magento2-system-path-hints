@@ -9,7 +9,15 @@
             "email": "tr33m4n@googlemail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "files": [
             "src/registration.php"
@@ -19,7 +27,31 @@
         }
     },
     "require": {
-        "php": "^7.2",
-        "magento/framework": "^100.1||^101.0||^102.0"
+        "php": "^8.1",
+        "magento/framework": "*"
+    },
+    "scripts": {
+        "fix": "vendor/bin/rector process && vendor/bin/php-cs-fixer fix --diff",
+        "test:static": "vendor/bin/phpstan analyse --no-interaction --no-progress && vendor/bin/phpcs src -s",
+        "test:lint": "vendor/bin/rector process --dry-run && vendor/bin/php-cs-fixer fix --dry-run --diff",
+        "test-static-analysis": [
+            "@test:static",
+            "@test:lint"
+        ],
+        "test": [
+            "@test-static-analysis"
+        ]
+    },
+    "require-dev": {
+        "adamwojs/php-cs-fixer-phpdoc-force-fqcn": "^2.0",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+        "friendsofphp/php-cs-fixer": "^3.62",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan": "^1.11",
+        "phpunit/phpunit": "^10.5",
+        "rector/rector": "^1.2"
+    },
+    "extra": {
+        "magento-deploystrategy": "none"
     }
 }

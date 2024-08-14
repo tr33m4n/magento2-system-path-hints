@@ -1,0 +1,12 @@
+parameters:
+    paths:
+        - %currentWorkingDirectory%/src
+    excludePaths:
+        - *Test*
+        - *tests*
+    level: max
+    ignoreErrors:
+        - '#Method (.*) should return class-string but returns string.#'
+        - '#PHPDoc tag @var for constant (.*) with type class-string is incompatible with value (.*)#'
+        - '#Default value of the parameter (.*) of method (.*) is incompatible with type class-string.#'
+        - '#Default value of the parameter (.*) of method (.*) is incompatible with type array<class-string>.#'

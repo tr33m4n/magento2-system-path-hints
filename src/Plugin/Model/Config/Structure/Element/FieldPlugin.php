@@ -1,46 +1,28 @@
 <?php
 
+declare(strict_types=1);
+
 namespace tr33m4n\SystemPathHints\Plugin\Model\Config\Structure\Element;
 
 use Magento\Config\Model\Config\Structure\Element\Field;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
-/**
- * Class FieldPlugin
- *
- * @package tr33m4n\SystemPathHints\Plugin\Model\Config\Structure\Element
- */
 class FieldPlugin
 {
-    /**
-     * System path hints path
-     */
-    const XML_ENABLE_PATH_HINTS_PATH = 'dev/debug/system_path_hints';
-
-    /**
-     * @var \Magento\Framework\App\Config\ScopeConfigInterface
-     */
-    private $scopeConfig;
+    private const XML_ENABLE_PATH_HINTS_PATH = 'dev/debug/system_path_hints';
 
     /**
      * FieldPlugin constructor.
-     *
-     * @param \Magento\Framework\App\Config\ScopeConfigInterface $scopeConfig
      */
     public function __construct(
-        ScopeConfigInterface $scopeConfig
+        private readonly ScopeConfigInterface $scopeConfig
     ) {
-        $this->scopeConfig = $scopeConfig;
     }
 
     /**
      * Add path to the field comment
-     *
-     * @param \Magento\Config\Model\Config\Structure\Element\Field $subject
-     * @param string                                               $result
-     * @return string
      */
-    public function afterGetComment(Field $subject, string $result) : string
+    public function afterGetComment(Field $subject, string $result): string
     {
         if (!$this->scopeConfig->isSetFlag(self::XML_ENABLE_PATH_HINTS_PATH)) {
             return $result;
